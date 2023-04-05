@@ -14,7 +14,8 @@ public class Testcase extends WebBase {
 
     @DataProvider()
     public Object[][] getData() throws IOException {
-        String path = "C:\\Users\\LTS\\Documents\\New folder\\Selenium_Final\\Selenium_Final\\src\\main\\resources\\LoginData.xlsx";
+        String projectPath = System.getProperty("user.dir");
+        String path = projectPath + "\\src\\main\\resources\\LoginData.xlsx";
         // get data on excel
         ExcelUtils excel = new ExcelUtils();
         Object data[][] = excel.getTestData("data", path);
