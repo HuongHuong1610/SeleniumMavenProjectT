@@ -1,10 +1,9 @@
 package tests;
 
-import core.WebBase;
-import org.openqa.selenium.interactions.Actions;
+import core.BaseTest;
 import pages.Products_element;
 
-public class Products_TCs extends WebBase {
+public class Products_TCs extends BaseTest {
     Products_element productsElement = new Products_element();
     Common common = new Common();
 
