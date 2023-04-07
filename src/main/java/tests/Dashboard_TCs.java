@@ -15,4 +15,9 @@ public class Dashboard_TCs {
         common.click(dashboardElement.catalog);
         common.click(dashboardElement.product);
     }
+
+    public void navigate_CustomerRolesPage() {
+        common.click(dashboardElement.customers);
+        common.click(dashboardElement.customer_roles);
+    }
 }
