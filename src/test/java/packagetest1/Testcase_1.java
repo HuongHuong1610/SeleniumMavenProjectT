@@ -81,6 +81,7 @@ public class Testcase_1 extends BaseTest {
         customerRoles_tCs.click_btn_chooseProduct();
         customerRoles_tCs.displayedPopUp();
         customerRoles_tCs.click_save();
+        customerRoles_tCs.click_btn_chooseProduct();
 
         log.info("Step5 : Log out");
         log_tCs.logout();
