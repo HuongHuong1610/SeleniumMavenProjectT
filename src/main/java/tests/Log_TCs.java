@@ -23,6 +23,10 @@ public class Log_TCs {
         common.click(loginPageElement.btn_login);
     }
 
+    public void closeAlert() {
+        common.click(loginPageElement.btn_alert);
+    }
+
     public void logout() {
         common.click(loginPageElement.btn_logout);
     }

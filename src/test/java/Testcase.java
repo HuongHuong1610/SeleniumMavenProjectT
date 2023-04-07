@@ -34,6 +34,7 @@ public class Testcase extends WebBase {
         categories_tCs.input_Categoryname();
         //Click button Save & verify message
         categories_tCs.click_save();
+        log_tCs.closeAlert();
         //Log out
         log_tCs.logout();
     }
