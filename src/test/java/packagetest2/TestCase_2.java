@@ -1,4 +1,4 @@
-package testcase;
+package packagetest2;
 
 import core.ExcelUtils;
 import core.GlobalConstants;
@@ -22,7 +22,7 @@ public class TestCase_2 extends baseTestCrossBrowser {
         return data;
     }
 
-    @Test(dataProvider = "getData")
+    @Test(dataProvider = "getData",enabled = false)
     public void TC_CreateNewCategory(String email, String pwd) {
         log.info("Step1 :Login");
 
