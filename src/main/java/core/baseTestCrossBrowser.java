@@ -9,30 +9,30 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import java.time.Duration;
 
 public class baseTestCrossBrowser {
     protected static WebDriver driver;
     protected static WebDriverWait wait;
-    protected  Log log;
+    protected Log log;
 
 
     public baseTestCrossBrowser() {
         log = LogFactory.getLog(getClass());
     }
-
+    @Parameters("browser")
     @BeforeMethod
     protected WebDriver setup(String browserName) {
-        BrowserList browserList = BrowserList.valueOf(browserName.toUpperCase());
-        switch (browserList) {
-            case CHROME:
+        switch (browserName) {
+            case "CHROME":
                 driver = new ChromeDriver();
                 break;
-            case FIREFOX:
+            case "FIREFOX":
                 driver = new FirefoxDriver();
                 break;
-            case EDGE:
+            case "EDGE":
                 driver = new EdgeDriver();
                 break;
             default:

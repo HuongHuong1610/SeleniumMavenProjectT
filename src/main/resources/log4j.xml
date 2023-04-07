@@ -17,7 +17,7 @@
         </layout>
     </appender>
 
-    <category name="testcase">
+    <category name="packagetest2">
         <priority value="all" />
         <appender-ref ref="console" />
         <appender-ref ref="logfile" />
