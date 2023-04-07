@@ -1,13 +1,12 @@
 package tests;
 
-import core.WebBase;
+import core.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class Common extends WebBase {
+public class Common extends BaseTest {
     //Verify Element is Displayed
     public void isDisplayed(By by){
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
