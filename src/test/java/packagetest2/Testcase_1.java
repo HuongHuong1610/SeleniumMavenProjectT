@@ -1,20 +1,25 @@
-package testcase;
+package packagetest2;
 
-import core.ExcelUtils;
 import core.BaseTest;
+import core.ExcelUtils;
 import core.GlobalConstants;
+import core.baseTestCrossBrowser;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import tests.*;
+import tests.Categories_TCs;
+import tests.Dashboard_TCs;
+import tests.Log_TCs;
+import tests.Products_TCs;
 
-public class Testcase extends BaseTest {
+public class Testcase_1 extends baseTestCrossBrowser {
     Log_TCs log_tCs = new Log_TCs();
     Dashboard_TCs dashboard_tCs = new Dashboard_TCs();
     Categories_TCs categories_tCs = new Categories_TCs();
     Products_TCs products_tCs = new Products_TCs();
 
     @DataProvider()
-    public Object[][] getData(){
+    public Object[][] getData() {
         String path = GlobalConstants.PROJECT_PATH + "\\src\\main\\resources\\LoginData.xlsx";
         log.info("get data on excel");
         ExcelUtils excel = new ExcelUtils();
@@ -41,8 +46,6 @@ public class Testcase extends BaseTest {
         categories_tCs.click_save();
 
         log.info("Step5 : Log out");
-        log_tCs.closeAlert();
-        //Log out
         log_tCs.logout();
     }
 
