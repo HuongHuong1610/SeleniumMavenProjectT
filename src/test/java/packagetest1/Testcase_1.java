@@ -12,6 +12,7 @@ public class Testcase_1 extends BaseTest {
     Dashboard_TCs dashboard_tCs = new Dashboard_TCs();
     Categories_TCs categories_tCs = new Categories_TCs();
     Products_TCs products_tCs = new Products_TCs();
+    CustomerRoles_TCs customerRoles_tCs = new CustomerRoles_TCs();
 
     @DataProvider()
     public Object[][] getData(){
@@ -25,8 +26,8 @@ public class Testcase_1 extends BaseTest {
     @Test(dataProvider = "getData")
     public void TC_CreateNewCategory(String email, String pwd) {
         log.info("Step1 :Login");
-
         log_tCs.login_success(email, pwd);
+
         log.info("Verify Categories Page");
         dashboard_tCs.navigate_CategoriesPage();
         categories_tCs.verify_CategoriesPage();
@@ -41,6 +42,7 @@ public class Testcase_1 extends BaseTest {
         categories_tCs.click_save();
 
         log.info("Step5 : Log out");
+        log_tCs.closeAlert();
         log_tCs.logout();
     }
 
@@ -66,4 +68,22 @@ public class Testcase_1 extends BaseTest {
         log_tCs.logout();
     }
 
+    @Test(dataProvider = "getData")
+    public void TC_VerifyProduct(String email, String pwd) {
+        log.info("Step1 :Login");
+        log_tCs.login_success(email, pwd);
+        dashboard_tCs.navigate_CustomerRolesPage();
+
+        log.info("Step 2: Choose a product");
+        customerRoles_tCs.click_edit("Guests");
+
+        log.info("Step3: Verify product info");
+        customerRoles_tCs.click_btn_chooseProduct();
+        customerRoles_tCs.displayedPopUp();
+        customerRoles_tCs.click_save();
+        customerRoles_tCs.click_btn_chooseProduct();
+
+        log.info("Step5 : Log out");
+        log_tCs.logout();
+    }
 }
