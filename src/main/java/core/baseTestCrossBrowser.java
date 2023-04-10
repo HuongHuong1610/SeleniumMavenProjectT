@@ -48,4 +48,7 @@ public class baseTestCrossBrowser {
     public void afterClass() {
         driver.quit();
     }
+    public WebDriver getWebDriver(){
+        return this.driver;
+    }
 }
