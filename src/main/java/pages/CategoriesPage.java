@@ -1,12 +1,12 @@
-package tests;
+package pages;
 
-import pages.Categories_element;
+import util.CategoriesUtil;
 
-public class Categories_TCs {
-    Categories_element categoriesElement = new Categories_element();
+public class CategoriesPage {
+    CategoriesUtil categoriesElement = new CategoriesUtil();
     Common common = new Common();
 
-    public void verify_CategoriesPage() {
+    public void verifyCategoriesPage() {
         common.isDisplayed(categoriesElement.btn_add);
         common.isDisplayed(categoriesElement.btn_export);
         common.isDisplayed(categoriesElement.btn_import);
@@ -15,15 +15,15 @@ public class Categories_TCs {
         common.isDisplayed(categoriesElement.published);
     }
 
-    public void click_add() {
+    public void clickAdd() {
         common.click(categoriesElement.btn_add);
     }
 
-    public void input_Categoryname() {
+    public void inputCategoryName() {
         common.sendKeys(categoriesElement.category_name, "test");
     }
 
-    public void click_save() {
+    public void clickSave() {
         common.click(categoriesElement.btn_save);
         common.isDisplayed(categoriesElement.message);
     }

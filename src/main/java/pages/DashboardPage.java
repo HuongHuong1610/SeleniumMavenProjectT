@@ -1,9 +1,9 @@
-package tests;
+package pages;
 
-import pages.Dashboard_element;
+import util.DashboardUtil;
 
-public class Dashboard_TCs {
-    Dashboard_element dashboardElement =new Dashboard_element();
+public class DashboardPage {
+    DashboardUtil dashboardElement =new DashboardUtil();
     Common common = new Common();
 
     public void navigate_CategoriesPage() {

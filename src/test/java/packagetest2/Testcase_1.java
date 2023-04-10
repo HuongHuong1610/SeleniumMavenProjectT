@@ -1,28 +1,26 @@
 package packagetest2;
 
-import core.BaseTest;
-import core.ExcelUtils;
+import core.ExcelHelper;
 import core.GlobalConstants;
 import core.baseTestCrossBrowser;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import tests.Categories_TCs;
-import tests.Dashboard_TCs;
-import tests.Log_TCs;
-import tests.Products_TCs;
+import pages.CategoriesPage;
+import pages.DashboardPage;
+import pages.LogInPage;
+import pages.ProductsPage;
 
 public class Testcase_1 extends baseTestCrossBrowser {
-    Log_TCs log_tCs = new Log_TCs();
-    Dashboard_TCs dashboard_tCs = new Dashboard_TCs();
-    Categories_TCs categories_tCs = new Categories_TCs();
-    Products_TCs products_tCs = new Products_TCs();
+    LogInPage logInPage = new LogInPage();
+    DashboardPage dashboardPage = new DashboardPage();
+    CategoriesPage categoriesPage = new CategoriesPage();
+    ProductsPage productsPage = new ProductsPage();
 
     @DataProvider()
     public Object[][] getData() {
         String path = GlobalConstants.PROJECT_PATH + "\\src\\main\\resources\\LoginData.xlsx";
         log.info("get data on excel");
-        ExcelUtils excel = new ExcelUtils();
+        ExcelHelper excel = new ExcelHelper();
         Object data[][] = excel.getTestData("data", path);
         return data;
     }
@@ -31,44 +29,44 @@ public class Testcase_1 extends baseTestCrossBrowser {
     public void TC_CreateNewCategory(String email, String pwd) {
         log.info("Step1 :Login");
 
-        log_tCs.login_success(email, pwd);
+        logInPage.login_success(email, pwd);
         log.info("Verify Categories Page");
-        dashboard_tCs.navigate_CategoriesPage();
-        categories_tCs.verify_CategoriesPage();
+        dashboardPage.navigate_CategoriesPage();
+        categoriesPage.verifyCategoriesPage();
 
         log.info("step2 : Click button Add new");
-        categories_tCs.click_add();
+        categoriesPage.clickAdd();
 
         log.info("Step3 : Input Category Name");
-        categories_tCs.input_Categoryname();
+        categoriesPage.inputCategoryName();
 
         log.info("Step4 : Click button Save & verify message");
-        categories_tCs.click_save();
+        categoriesPage.clickSave();
 
         log.info("Step5 : Log out");
-        log_tCs.logout();
+        logInPage.logout();
     }
 
     @Test(dataProvider = "getData")
     public void TC_CreateNewCustomer(String email, String pwd) {
         log.info("Step1 :Login");
-        log_tCs.login_success(email, pwd);
+        logInPage.login_success(email, pwd);
 
         log.info("Verify Product Page");
-        dashboard_tCs.navigate_ProductPage();
-        products_tCs.verify_Productpage();
+        dashboardPage.navigate_ProductPage();
+        productsPage.verify_Productpage();
 
         log.info("Step 2: Click button Add new");
-        products_tCs.click_add();
+        productsPage.click_add();
 
         log.info("Step3: Input Product Name, description, SKU, Categories, Price, Old price");
-        products_tCs.input();
+        productsPage.input();
 
         log.info("Step 4: Input Product Name, description, SKU, Categories, Price, Old price");
-        products_tCs.click_save();
+        productsPage.click_save();
 
         log.info("Step5: logout");
-        log_tCs.logout();
+        logInPage.logout();
     }
 
 }

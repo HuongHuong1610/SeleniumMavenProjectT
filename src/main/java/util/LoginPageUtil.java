@@ -1,8 +1,8 @@
-package pages;
+package util;
 
 import org.openqa.selenium.By;
 
-public class LoginPage_element {
+public class LoginPageUtil {
     public By email = By.id("Email");
     public By password = By.id("Password");
 

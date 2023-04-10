@@ -1,11 +1,11 @@
-package tests;
+package pages;
 
-import pages.Dashboard_element;
-import pages.LoginPage_element;
+import util.DashboardUtil;
+import util.LoginPageUtil;
 
-public class Log_TCs {
-    LoginPage_element loginPageElement = new LoginPage_element();
-    Dashboard_element dashboardElement = new Dashboard_element();
+public class LogInPage {
+    LoginPageUtil loginPageElement = new LoginPageUtil();
+    DashboardUtil dashboardElement = new DashboardUtil();
     Common common = new Common();
 
     public void login_success(String email, String pwd) {

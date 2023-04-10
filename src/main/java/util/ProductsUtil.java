@@ -1,8 +1,8 @@
-package pages;
+package util;
 
 import org.openqa.selenium.By;
 
-public class Products_element {
+public class ProductsUtil {
     public By btn_add = By.xpath("//a[@href='/Admin/Product/Create']");
     public By btn_export = By.className("btn-group");
     public By btn_import = By.name("importexcel");

@@ -1,10 +1,10 @@
-package tests;
+package pages;
 
 import core.BaseTest;
-import pages.Products_element;
+import util.ProductsUtil;
 
-public class Products_TCs extends BaseTest {
-    Products_element productsElement = new Products_element();
+public class ProductsPage extends BaseTest {
+    ProductsUtil productsElement = new ProductsUtil();
     Common common = new Common();
 
     public void verify_Productpage() {

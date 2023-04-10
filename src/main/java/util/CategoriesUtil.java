@@ -1,8 +1,8 @@
-package pages;
+package util;
 
 import org.openqa.selenium.By;
 
-public class Categories_element {
+public class CategoriesUtil {
     public By btn_add = By.xpath("//a[@href='/Admin/Category/Create']");
     public By btn_export = By.className("btn-group");
     public By btn_import = By.name("importexcel");
