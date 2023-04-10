@@ -1,14 +1,13 @@
 package pages;
 
-import core.BaseTest;
 import util.ProductsUtil;
 
-public class ProductsPage extends BaseTest {
+public class ProductsPage extends AbstractPage {
     ProductsUtil productsElement = new ProductsUtil();
     Common common = new Common();
 
-    public void verify_Productpage() {
-        common.isDisplayed(productsElement.btn_add);
+    public void verifyProductPage() {
+        common.isDisplayed(productsElement.btn_add_product);
         common.isDisplayed(productsElement.btn_export);
         common.isDisplayed(productsElement.btn_import);
         common.isDisplayed(productsElement.btn_delete);
@@ -18,11 +17,11 @@ public class ProductsPage extends BaseTest {
         common.isDisplayed(productsElement.product_type);
     }
 
-    public void click_add() {
-        common.click(productsElement.btn_add);
+    public void clickAddProduct() {
+        common.click(productsElement.btn_add_product);
     }
 
-    public void input() {
+    public void inputInfoProduct() {
         common.sendKeys(productsElement.name, "iphone");
         common.sendKeys(productsElement.description, "nothing");
         common.sendKeys(productsElement.sku, "1234567");
@@ -30,11 +29,6 @@ public class ProductsPage extends BaseTest {
         common.click(productsElement.books);
         common.sendKeys(productsElement.price, "13");
         common.sendKeys(productsElement.old_price, "23");
-    }
-
-    public void click_save() {
-        common.click(productsElement.btn_save);
-        common.isDisplayed(productsElement.message);
     }
 
 }

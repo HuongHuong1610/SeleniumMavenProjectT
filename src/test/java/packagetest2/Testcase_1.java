@@ -29,13 +29,13 @@ public class Testcase_1 extends baseTestCrossBrowser {
     public void TC_CreateNewCategory(String email, String pwd) {
         log.info("Step1 :Login");
 
-        logInPage.login_success(email, pwd);
+        logInPage.loginSuccess(email, pwd);
         log.info("Verify Categories Page");
-        dashboardPage.navigate_CategoriesPage();
+        dashboardPage.navigateCategoriesPage();
         categoriesPage.verifyCategoriesPage();
 
         log.info("step2 : Click button Add new");
-        categoriesPage.clickAdd();
+        categoriesPage.clickAddCategory();
 
         log.info("Step3 : Input Category Name");
         categoriesPage.inputCategoryName();
@@ -44,29 +44,29 @@ public class Testcase_1 extends baseTestCrossBrowser {
         categoriesPage.clickSave();
 
         log.info("Step5 : Log out");
-        logInPage.logout();
+        logInPage.logOut();
     }
 
     @Test(dataProvider = "getData")
     public void TC_CreateNewCustomer(String email, String pwd) {
         log.info("Step1 :Login");
-        logInPage.login_success(email, pwd);
+        logInPage.loginSuccess(email, pwd);
 
         log.info("Verify Product Page");
-        dashboardPage.navigate_ProductPage();
-        productsPage.verify_Productpage();
+        dashboardPage.navigateProductPage();
+        productsPage.verifyProductPage();
 
         log.info("Step 2: Click button Add new");
-        productsPage.click_add();
+        productsPage.clickAddProduct();
 
         log.info("Step3: Input Product Name, description, SKU, Categories, Price, Old price");
-        productsPage.input();
+        productsPage.inputInfoProduct();
 
         log.info("Step 4: Input Product Name, description, SKU, Categories, Price, Old price");
-        productsPage.click_save();
+        productsPage.clickSave();
 
         log.info("Step5: logout");
-        logInPage.logout();
+        logInPage.logOut();
     }
 
 }

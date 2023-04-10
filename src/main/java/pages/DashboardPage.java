@@ -6,17 +6,17 @@ public class DashboardPage {
     DashboardUtil dashboardElement =new DashboardUtil();
     Common common = new Common();
 
-    public void navigate_CategoriesPage() {
+    public void navigateCategoriesPage() {
         common.click(dashboardElement.catalog);
         common.click(dashboardElement.categories);
     }
 
-    public void navigate_ProductPage() {
+    public void navigateProductPage() {
         common.click(dashboardElement.catalog);
         common.click(dashboardElement.product);
     }
 
-    public void navigate_CustomerRolesPage() {
+    public void navigateCustomerRolesPage() {
         common.click(dashboardElement.customers);
         common.click(dashboardElement.customer_roles);
     }

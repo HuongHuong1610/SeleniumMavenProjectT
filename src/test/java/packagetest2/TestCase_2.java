@@ -26,13 +26,13 @@ public class TestCase_2 extends baseTestCrossBrowser {
     public void TC_CreateNewCategory(String email, String pwd) {
         log.info("Step1 :Login");
 
-        logInPage.login_success(email, pwd);
+        logInPage.loginSuccess(email, pwd);
         log.info("Verify Categories Page");
-        dashboardPage.navigate_CategoriesPage();
+        dashboardPage.navigateCategoriesPage();
         categoriesPage.verifyCategoriesPage();
 
         log.info("step2 : Click button Add new");
-        categoriesPage.clickAdd();
+        categoriesPage.clickAddCategory();
 
         log.info("Step3 : Input Category Name");
         categoriesPage.inputCategoryName();
@@ -41,6 +41,6 @@ public class TestCase_2 extends baseTestCrossBrowser {
         categoriesPage.clickSave();
 
         log.info("Step5 : Log out");
-        logInPage.logout();
+        logInPage.logOut();
     }
 }

@@ -8,7 +8,7 @@ public class LogInPage {
     DashboardUtil dashboardElement = new DashboardUtil();
     Common common = new Common();
 
-    public void login_success(String email, String pwd) {
+    public void loginSuccess(String email, String pwd) {
         common.clear(loginPageElement.email);
         common.sendKeys(loginPageElement.email, email);
         common.clear(loginPageElement.password);
@@ -27,7 +27,7 @@ public class LogInPage {
         common.click(loginPageElement.btn_alert);
     }
 
-    public void logout() {
+    public void logOut() {
         common.click(loginPageElement.btn_logout);
     }
 
