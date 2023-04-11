@@ -84,4 +84,9 @@ public class Common extends BaseTest {
 //        driver.switchTo().window(parentWindowHandler);
     }
 
+    public String getValueOfEleDisplay(By by) {
+        String result = driver.findElement(by).getCssValue("display");
+        log.info("Value: " + result);
+        return result;
+    }
 }

@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import util.ProductsUtil;
 
 public class ProductsPage extends AbstractPage {
@@ -21,12 +22,21 @@ public class ProductsPage extends AbstractPage {
         common.click(productsElement.btn_add_product);
     }
 
+    public void checkPriceExpand() {
+        if (common.getValueOfEleDisplay(By.xpath(productsElement.price_product_field + "//*[@class = 'card-body']")).contains("none")) {
+            common.click(By.xpath(productsElement.price_product_field));
+        }
+    }
+
     public void inputInfoProduct() {
         common.sendKeys(productsElement.name, "iphone");
         common.sendKeys(productsElement.description, "nothing");
         common.sendKeys(productsElement.sku, "1234567");
         common.click(productsElement.categories);
         common.click(productsElement.books);
+    }
+
+    public void inputPriceProduct() {
         common.sendKeys(productsElement.price, "13");
         common.sendKeys(productsElement.old_price, "23");
     }
