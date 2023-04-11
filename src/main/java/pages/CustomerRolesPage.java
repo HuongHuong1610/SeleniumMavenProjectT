@@ -7,7 +7,7 @@ import util.CustomerRolesUtil;
 
 import java.util.List;
 
-public class CustomerRolesPage extends BaseTest {
+public class CustomerRolesPage extends AbstractPage {
     Common common = new Common();
     CustomerRolesUtil customerRolesElement = new CustomerRolesUtil();
 
@@ -28,8 +28,4 @@ public class CustomerRolesPage extends BaseTest {
         listPro.get(index).click();
     }
 
-    public void clickSave(){
-        common.click(customerRolesElement.btn_save);
-        common.waitForMessageDisplayed();
-    }
 }

@@ -16,5 +16,6 @@ public class ProductsUtil extends AbstractPageUtil{
 
     public By price = By.xpath("//input[@id='Price']//preceding-sibling::input");
     public By old_price = By.xpath("//input[@id='OldPrice']//preceding-sibling::input");
+    public String price_product_field = "//*[@data-card-name = 'product-price']";
 
 }

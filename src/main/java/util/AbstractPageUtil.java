@@ -10,5 +10,8 @@ public class AbstractPageUtil {
     public By btn_delete = By.id("delete-selected");
     public By name = By.id("Name");
     public By btn_save = By.name("save");
-    public By message = By.xpath("//button[@data-dismiss='alert']");
+    public String search = "//*[contains(@data-hideattribute, 'HideSearchBlock')]";
+    public String info_product_field = "//*[contains(@data-hideattribute, 'HideInfoBlock')]";
+
+
 }

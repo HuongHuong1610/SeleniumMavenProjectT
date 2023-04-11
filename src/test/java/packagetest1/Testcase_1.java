@@ -23,6 +23,7 @@ public class Testcase_1 extends BaseTest {
         return data;
     }
 
+    //expect input from method getData
     @Test(dataProvider = "getData")
     public void TC_CreateNewCategory(String email, String pwd) {
         log.info("Step1 :Login");
@@ -30,9 +31,11 @@ public class Testcase_1 extends BaseTest {
 
         log.info("Verify Categories Page");
         dashboardPage.navigateCategoriesPage();
+        categoriesPage.checkSearchExpand();
         categoriesPage.verifyCategoriesPage();
 
         log.info("step2 : Click button Add new");
+        categoriesPage.checkInfoProdFieldExpand();
         categoriesPage.clickAddCategory();
 
         log.info("Step3 : Input Category Name");
@@ -53,13 +56,17 @@ public class Testcase_1 extends BaseTest {
 
         log.info("Verify Product Page");
         dashboardPage.navigateProductPage();
+        productsPage.checkSearchExpand();
         productsPage.verifyProductPage();
 
         log.info("Step 2: Click button Add new");
         productsPage.clickAddProduct();
 
         log.info("Step3: Input Product Name, description, SKU, Categories, Price, Old price");
+        productsPage.checkInfoProdFieldExpand();
         productsPage.inputInfoProduct();
+        productsPage.checkPriceExpand();
+        productsPage.inputPriceProduct();
 
         log.info("Step 4: Input Product Name, description, SKU, Categories, Price, Old price");
         productsPage.clickSave();
