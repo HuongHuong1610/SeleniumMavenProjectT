@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import util.CategoriesUtil;
 
 public class CategoriesPage extends AbstractPage {
@@ -19,8 +20,15 @@ public class CategoriesPage extends AbstractPage {
         common.click(categoriesElement.btn_add_categories);
     }
 
-    public void inputCategoryName() {
-        common.sendKeys(categoriesElement.name, "test");
+    public void inputCategoryName(String name) {
+        common.sendKeys(categoriesElement.name, name);
     }
 
+    public void searchCategoryByName(String name) {
+        common.sendKeys(categoriesElement.category_name, name);
+    }
+
+    public void verifyCateDisplayed(String name) {
+        common.isDisplayed(By.xpath("//table[@id = 'categories-grid']/././/td[contains(text(), '" + name + "')]"));
+    }
 }

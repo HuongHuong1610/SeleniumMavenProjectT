@@ -35,11 +35,10 @@ public class Testcase_1 extends BaseTest {
         categoriesPage.verifyCategoriesPage();
 
         log.info("step2 : Click button Add new");
-        categoriesPage.checkInfoProdFieldExpand();
         categoriesPage.clickAddCategory();
 
         log.info("Step3 : Input Category Name");
-        categoriesPage.inputCategoryName();
+        categoriesPage.inputCategoryName("test");
 
         log.info("Step4 : Click button Save & verify message");
         categoriesPage.clickSave();

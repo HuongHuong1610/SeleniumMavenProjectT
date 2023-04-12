@@ -35,7 +35,7 @@ public class TestCase_2 extends baseTestCrossBrowser {
         categoriesPage.clickAddCategory();
 
         log.info("Step3 : Input Category Name");
-        categoriesPage.inputCategoryName();
+        categoriesPage.inputCategoryName("test");
 
         log.info("Step4 : Click button Save & verify message");
         categoriesPage.clickSave();

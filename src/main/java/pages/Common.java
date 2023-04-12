@@ -19,7 +19,7 @@ public class Common extends BaseTest {
 
     public void isDisplayed(By by){
         log.info("Verify Element is Displayed");
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(by));
         Assert.assertTrue(element.isDisplayed());
     }
 
@@ -85,7 +85,9 @@ public class Common extends BaseTest {
     }
 
     public String getValueOfEleDisplay(By by) {
-        String result = driver.findElement(by).getCssValue("display");
+        //Cannot use visibilityOfElementLocated() - Expected condition failed: waiting for visibility of element located
+        //Use presenceOfElementLocated() > OK to find element (driver.findElement())
+        String result = wait.until(ExpectedConditions.presenceOfElementLocated(by)).getCssValue("display");
         log.info("Value: " + result);
         return result;
     }
