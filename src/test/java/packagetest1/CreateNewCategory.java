@@ -9,7 +9,7 @@ import pages.CategoriesPage;
 import pages.DashboardPage;
 import pages.LogInPage;
 
-public class TestCase_2 extends BaseTest {
+public class CreateNewCategory extends BaseTest {
     LogInPage logInPage = new LogInPage();
     DashboardPage dashboardPage = new DashboardPage();
     CategoriesPage categoriesPage = new CategoriesPage();
