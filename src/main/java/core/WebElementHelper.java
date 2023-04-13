@@ -1,7 +1,5 @@
-package pages;
+package core;
 
-import core.BaseTest;
-import core.GlobalConstants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,11 +13,11 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.function.Function;
 
-public class Common extends BaseTest {
+public class WebElementHelper extends BaseTest {
 
     public void isDisplayed(By by){
         log.info("Verify Element is Displayed");
-        WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(by));
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(by));
         Assert.assertTrue(element.isDisplayed());
     }
 
@@ -85,7 +83,7 @@ public class Common extends BaseTest {
     }
 
     public String getValueOfEleDisplay(By by) {
-        String result = driver.findElement(by).getCssValue("display");
+        String result = wait.until(ExpectedConditions.presenceOfElementLocated(by)).getCssValue("display");
         log.info("Value: " + result);
         return result;
     }

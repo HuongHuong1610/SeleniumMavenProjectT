@@ -8,10 +8,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.*;
 
-public class Testcase_1 extends BaseTest {
+public class CreateNewProduct extends BaseTest {
     LogInPage logInPage = new LogInPage();
     DashboardPage dashboardPage = new DashboardPage();
-    CategoriesPage categoriesPage = new CategoriesPage();
     ProductsPage productsPage = new ProductsPage();
     CustomerRolesPage customerRolesPage = new CustomerRolesPage();
 
@@ -26,32 +25,7 @@ public class Testcase_1 extends BaseTest {
 
     //expect input from method getData
     @Test(dataProvider = "getData")
-    public void TC_01_CreateNewCategory(String email, String pwd) {
-        log.info("Step1 :Login");
-        logInPage.loginSuccess(email, pwd);
-
-        log.info("Verify Categories Page");
-        dashboardPage.navigateCategoriesPage();
-        categoriesPage.checkSearchExpand();
-        categoriesPage.verifyCategoriesPage();
-
-        log.info("step2 : Click button Add new");
-        categoriesPage.checkInfoProdFieldExpand();
-        categoriesPage.clickAddCategory();
-
-        log.info("Step3 : Input Category Name");
-        categoriesPage.inputCategoryName();
-
-        log.info("Step4 : Click button Save & verify message");
-        categoriesPage.clickSave();
-
-        log.info("Step5 : Log out");
-        logInPage.closeAlert();
-        logInPage.logOut();
-    }
-
-    @Test(dataProvider = "getData")
-    public void TC_02_CreateNewCustomer(String email, String pwd) {
+    public void TC_01_CreateNewProduct(String email, String pwd) {
         log.info("Step1 :Login");
         logInPage.loginSuccess(email, pwd);
 
@@ -77,7 +51,7 @@ public class Testcase_1 extends BaseTest {
     }
 
     @Test(dataProvider = "getData")
-    public void TC_03_VerifyProduct(String email, String pwd) {
+    public void TC_02_VerifyProduct(String email, String pwd) {
         log.info("Step1 :Login");
         logInPage.loginSuccess(email, pwd);
         dashboardPage.navigateCustomerRolesPage();
@@ -97,30 +71,11 @@ public class Testcase_1 extends BaseTest {
         logInPage.logOut();
     }
     @Test
-    public void TC_04_ReadDataFromPropertiesFile() {
+    public void TC_03_ReadDataFromPropertiesFile() {
         log.info("Step1 :Login");
         PropertiesFile.setPropertiesFile();
         String email = PropertiesFile.getPropValue("email.login.error");
         String pwd = PropertiesFile.getPropValue("password.login.error");
         logInPage.loginSuccess(email, pwd);
-
-        log.info("Verify Categories Page");
-        dashboardPage.navigateCategoriesPage();
-        categoriesPage.checkSearchExpand();
-        categoriesPage.verifyCategoriesPage();
-
-        log.info("step2 : Click button Add new");
-        categoriesPage.checkInfoProdFieldExpand();
-        categoriesPage.clickAddCategory();
-
-        log.info("Step3 : Input Category Name");
-        categoriesPage.inputCategoryName();
-
-        log.info("Step4 : Click button Save & verify message");
-        categoriesPage.clickSave();
-
-        log.info("Step5 : Log out");
-        logInPage.closeAlert();
-        logInPage.logOut();
     }
 }

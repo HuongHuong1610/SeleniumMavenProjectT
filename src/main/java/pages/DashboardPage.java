@@ -2,22 +2,21 @@ package pages;
 
 import util.DashboardUtil;
 
-public class DashboardPage {
+public class DashboardPage extends AbstractPage {
     DashboardUtil dashboardElement =new DashboardUtil();
-    Common common = new Common();
 
     public void navigateCategoriesPage() {
-        common.click(dashboardElement.catalog);
-        common.click(dashboardElement.categories);
+        webElementHelper.click(dashboardElement.catalog);
+        webElementHelper.click(dashboardElement.categories);
     }
 
     public void navigateProductPage() {
-        common.click(dashboardElement.catalog);
-        common.click(dashboardElement.product);
+        webElementHelper.click(dashboardElement.catalog);
+        webElementHelper.click(dashboardElement.product);
     }
 
     public void navigateCustomerRolesPage() {
-        common.click(dashboardElement.customers);
-        common.click(dashboardElement.customer_roles);
+        webElementHelper.click(dashboardElement.customers);
+        webElementHelper.click(dashboardElement.customer_roles);
     }
 }

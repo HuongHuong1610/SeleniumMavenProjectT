@@ -3,32 +3,31 @@ package pages;
 import util.DashboardUtil;
 import util.LoginPageUtil;
 
-public class LogInPage {
+public class LogInPage extends AbstractPage {
     LoginPageUtil loginPageElement = new LoginPageUtil();
     DashboardUtil dashboardElement = new DashboardUtil();
-    Common common = new Common();
 
     public void loginSuccess(String email, String pwd) {
-        common.clear(loginPageElement.email);
-        common.sendKeys(loginPageElement.email, email);
-        common.clear(loginPageElement.password);
-        common.sendKeys(loginPageElement.password, pwd);
-        common.click(loginPageElement.btn_login);
-        common.isDisplayed(dashboardElement.menu);
+        webElementHelper.clear(loginPageElement.email);
+        webElementHelper.sendKeys(loginPageElement.email, email);
+        webElementHelper.clear(loginPageElement.password);
+        webElementHelper.sendKeys(loginPageElement.password, pwd);
+        webElementHelper.click(loginPageElement.btn_login);
+        webElementHelper.isDisplayed(dashboardElement.menu);
     }
 
     public void login_valid() {
-        common.sendKeys(loginPageElement.email, "super");
-        common.sendKeys(loginPageElement.password, "admin");
-        common.click(loginPageElement.btn_login);
+        webElementHelper.sendKeys(loginPageElement.email, "super");
+        webElementHelper.sendKeys(loginPageElement.password, "admin");
+        webElementHelper.click(loginPageElement.btn_login);
     }
 
     public void closeAlert() {
-        common.click(loginPageElement.btn_alert);
+        webElementHelper.click(loginPageElement.btn_alert);
     }
 
     public void logOut() {
-        common.click(loginPageElement.btn_logout);
+        webElementHelper.click(loginPageElement.btn_logout);
     }
 
 
