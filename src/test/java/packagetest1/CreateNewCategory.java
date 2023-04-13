@@ -25,7 +25,7 @@ public class CreateNewCategory extends BaseTest {
     }
 
     @Test(dataProvider = "getData")
-    public void TC_CreateNewCategory(String email, String pwd) {
+    public void TC_01_CreateNewCategory(String email, String pwd) {
         log.info("Step1 :Login");
         logInPage.loginSuccess(email, pwd);
         log.info("Verify Categories Page");

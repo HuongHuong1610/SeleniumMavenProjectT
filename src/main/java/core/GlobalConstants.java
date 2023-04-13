@@ -1,6 +1,5 @@
 package core;
 
-import java.io.File;
 
 public class GlobalConstants {
     //System information

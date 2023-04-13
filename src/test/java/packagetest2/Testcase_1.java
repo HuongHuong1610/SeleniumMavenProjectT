@@ -26,7 +26,7 @@ public class Testcase_1 extends baseTestCrossBrowser {
     }
 
     @Test(dataProvider = "getData")
-    public void TC_CreateNewCategory(String email, String pwd) {
+    public void TC_01_CreateNewCategory(String email, String pwd) {
         log.info("Step1 :Login");
 
         logInPage.loginSuccess(email, pwd);
@@ -48,7 +48,7 @@ public class Testcase_1 extends baseTestCrossBrowser {
     }
 
     @Test(dataProvider = "getData")
-    public void TC_CreateNewCustomer(String email, String pwd) {
+    public void TC_02_CreateNewCustomer(String email, String pwd) {
         log.info("Step1 :Login");
         logInPage.loginSuccess(email, pwd);
 

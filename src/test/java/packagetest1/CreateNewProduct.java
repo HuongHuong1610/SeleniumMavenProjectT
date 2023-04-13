@@ -1,5 +1,6 @@
 package packagetest1;
 
+import commons.PropertiesFile;
 import core.ExcelHelper;
 import core.BaseTest;
 import core.GlobalConstants;
@@ -24,7 +25,7 @@ public class CreateNewProduct extends BaseTest {
 
     //expect input from method getData
     @Test(dataProvider = "getData")
-    public void TC_CreateNewProduct(String email, String pwd) {
+    public void TC_01_CreateNewProduct(String email, String pwd) {
         log.info("Step1 :Login");
         logInPage.loginSuccess(email, pwd);
 
@@ -50,7 +51,7 @@ public class CreateNewProduct extends BaseTest {
     }
 
     @Test(dataProvider = "getData")
-    public void TC_VerifyProduct(String email, String pwd) {
+    public void TC_02_VerifyProduct(String email, String pwd) {
         log.info("Step1 :Login");
         logInPage.loginSuccess(email, pwd);
         dashboardPage.navigateCustomerRolesPage();
@@ -68,5 +69,13 @@ public class CreateNewProduct extends BaseTest {
 
         log.info("Step5 : Log out");
         logInPage.logOut();
+    }
+    @Test
+    public void TC_03_ReadDataFromPropertiesFile() {
+        log.info("Step1 :Login");
+        PropertiesFile.setPropertiesFile();
+        String email = PropertiesFile.getPropValue("email.login.error");
+        String pwd = PropertiesFile.getPropValue("password.login.error");
+        logInPage.loginSuccess(email, pwd);
     }
 }

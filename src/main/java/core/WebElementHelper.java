@@ -83,8 +83,6 @@ public class WebElementHelper extends BaseTest {
     }
 
     public String getValueOfEleDisplay(By by) {
-        //Cannot use visibilityOfElementLocated() - Expected condition failed: waiting for visibility of element located
-        //Use presenceOfElementLocated() > OK to find element (driver.findElement())
         String result = wait.until(ExpectedConditions.presenceOfElementLocated(by)).getCssValue("display");
         log.info("Value: " + result);
         return result;
