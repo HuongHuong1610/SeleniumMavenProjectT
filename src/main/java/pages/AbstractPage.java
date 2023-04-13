@@ -7,6 +7,7 @@ import util.AbstractPageUtil;
 
 public class AbstractPage extends BaseTest {
     AbstractPageUtil abstractPageUtil = new AbstractPageUtil();
+    WebElementHelper webElementHelper = new WebElementHelper();
 
     public void checkSearchExpand() {
         if (webElementHelper.getValueOfEleDisplay(By.xpath(abstractPageUtil.search + "//following-sibling::*[contains(@class, 'search-body')]")).contains("none")) {
