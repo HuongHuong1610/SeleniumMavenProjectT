@@ -10,7 +10,6 @@ import pages.*;
 public class CreateNewProduct extends BaseTest {
     LogInPage logInPage = new LogInPage();
     DashboardPage dashboardPage = new DashboardPage();
-    CategoriesPage categoriesPage = new CategoriesPage();
     ProductsPage productsPage = new ProductsPage();
     CustomerRolesPage customerRolesPage = new CustomerRolesPage();
 

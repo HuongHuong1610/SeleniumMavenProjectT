@@ -30,6 +30,7 @@ public class CreateNewCategory extends BaseTest {
         logInPage.loginSuccess(email, pwd);
         log.info("Verify Categories Page");
         dashboardPage.navigateCategoriesPage();
+        categoriesPage.checkSearchExpand();
         categoriesPage.verifyCategoriesPage();
 
         log.info("step2 : Click button Add new");
