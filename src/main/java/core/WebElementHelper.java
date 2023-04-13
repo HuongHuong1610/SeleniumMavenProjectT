@@ -1,7 +1,5 @@
-package pages;
+package core;
 
-import core.BaseTest;
-import core.GlobalConstants;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,7 +13,7 @@ import java.util.NoSuchElementException;
 import java.util.Set;
 import java.util.function.Function;
 
-public class Common extends BaseTest {
+public class WebElementHelper extends BaseTest {
 
     public void isDisplayed(By by){
         log.info("Verify Element is Displayed");

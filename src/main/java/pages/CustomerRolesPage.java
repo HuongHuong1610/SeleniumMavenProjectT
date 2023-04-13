@@ -1,6 +1,6 @@
 package pages;
 
-import core.BaseTest;
+import core.WebElementHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import util.CustomerRolesUtil;
@@ -8,23 +8,23 @@ import util.CustomerRolesUtil;
 import java.util.List;
 
 public class CustomerRolesPage extends AbstractPage {
-    Common common = new Common();
+    WebElementHelper common = new WebElementHelper();
     CustomerRolesUtil customerRolesElement = new CustomerRolesUtil();
 
     public void clickEdit(String name) {
-        common.click(By.xpath("//td[contains(text(), '" + name + "')]//following-sibling::*//a[@class = 'btn btn-default']"));
+        webElementHelper.click(By.xpath("//td[contains(text(), '" + name + "')]//following-sibling::*//a[@class = 'btn btn-default']"));
     }
 
     public void clickBtnChooseProduct() {
-        common.click(customerRolesElement.btn_ChooseProduct);
+        webElementHelper.click(customerRolesElement.btn_ChooseProduct);
     }
 
     public void switchToWindow(String tittle) {
-        common.switchToWindow(tittle);
+        webElementHelper.switchToWindow(tittle);
     }
 
     public void selectProduct(int index) {
-        List<WebElement> listPro = common.findElements(customerRolesElement.btn_select);
+        List<WebElement> listPro = webElementHelper.findElements(customerRolesElement.btn_select);
         listPro.get(index).click();
     }
 
