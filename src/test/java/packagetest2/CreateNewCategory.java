@@ -10,7 +10,7 @@ import pages.DashboardPage;
 import pages.LogInPage;
 import pages.ProductsPage;
 
-public class Testcase_1 extends baseTestCrossBrowser {
+public class CreateNewCategory extends baseTestCrossBrowser {
     LogInPage logInPage = new LogInPage();
     DashboardPage dashboardPage = new DashboardPage();
     CategoriesPage categoriesPage = new CategoriesPage();
@@ -44,28 +44,6 @@ public class Testcase_1 extends baseTestCrossBrowser {
         categoriesPage.clickSave();
 
         log.info("Step5 : Log out");
-        logInPage.logOut();
-    }
-
-    @Test(dataProvider = "getData")
-    public void TC_02_CreateNewCustomer(String email, String pwd) {
-        log.info("Step1 :Login");
-        logInPage.loginSuccess(email, pwd);
-
-        log.info("Verify Product Page");
-        dashboardPage.navigateProductPage();
-        productsPage.verifyProductPage();
-
-        log.info("Step 2: Click button Add new");
-        productsPage.clickAddProduct();
-
-        log.info("Step3: Input Product Name, description, SKU, Categories, Price, Old price");
-        productsPage.inputInfoProduct();
-
-        log.info("Step 4: Input Product Name, description, SKU, Categories, Price, Old price");
-        productsPage.clickSave();
-
-        log.info("Step5: logout");
         logInPage.logOut();
     }
 

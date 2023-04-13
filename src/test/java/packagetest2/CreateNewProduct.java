@@ -9,7 +9,7 @@ import pages.CategoriesPage;
 import pages.DashboardPage;
 import pages.LogInPage;
 
-public class TestCase_2 extends baseTestCrossBrowser {
+public class CreateNewProduct extends baseTestCrossBrowser {
     LogInPage logInPage = new LogInPage();
     DashboardPage dashboardPage = new DashboardPage();
     CategoriesPage categoriesPage = new CategoriesPage();
