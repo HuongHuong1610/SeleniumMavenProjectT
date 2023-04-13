@@ -26,13 +26,13 @@ public class baseTestCrossBrowser {
     @BeforeMethod
     protected WebDriver setup(String browserName) {
         switch (browserName) {
-            case "CHROME":
+            case "chrome":
                 driver = new ChromeDriver();
                 break;
-            case "FIREFOX":
+            case "firefox":
                 driver = new FirefoxDriver();
                 break;
-            case "EDGE":
+            case "edge":
                 driver = new EdgeDriver();
                 break;
             default:
