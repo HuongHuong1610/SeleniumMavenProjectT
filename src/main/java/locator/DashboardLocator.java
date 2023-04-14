@@ -1,8 +1,8 @@
-package util;
+package locator;
 
 import org.openqa.selenium.By;
 
-public class DashboardUtil {
+public class DashboardLocator {
     public By menu = By.className("os-content");
     public By catalog = By.xpath("//a[@href='#']//p[contains(text(), 'Catalog')]");
     public By categories = By.xpath("//p[contains(text(),'Categories')]");

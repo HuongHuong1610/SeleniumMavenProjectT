@@ -25,6 +25,9 @@ public class WebElementHelper extends BaseTest {
         log.info("Input value");
         wait.until(ExpectedConditions.visibilityOfElementLocated(by)).sendKeys(value);
     }
+    public static String waitAndGetText(By by){
+        return wait.until(ExpectedConditions.visibilityOfElementLocated(by)).getText();
+    }
 
     public void click(By by){
         log.info("Click button");

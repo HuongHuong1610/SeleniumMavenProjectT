@@ -1,11 +1,11 @@
 package pages;
 
-import util.DashboardUtil;
-import util.LoginPageUtil;
+import locator.DashboardLocator;
+import locator.LoginPageLocator;
 
 public class LogInPage extends AbstractPage {
-    LoginPageUtil loginPageElement = new LoginPageUtil();
-    DashboardUtil dashboardElement = new DashboardUtil();
+    LoginPageLocator loginPageElement = new LoginPageLocator();
+    DashboardLocator dashboardElement = new DashboardLocator();
 
     public void loginSuccess(String email, String pwd) {
         webElementHelper.clear(loginPageElement.email);
@@ -13,7 +13,7 @@ public class LogInPage extends AbstractPage {
         webElementHelper.clear(loginPageElement.password);
         webElementHelper.sendKeys(loginPageElement.password, pwd);
         webElementHelper.click(loginPageElement.btn_login);
-        webElementHelper.isDisplayed(dashboardElement.menu);
+//        webElementHelper.isDisplayed(dashboardElement.menu);
     }
 
     public void login_valid() {

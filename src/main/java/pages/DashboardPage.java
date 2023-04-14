@@ -1,9 +1,9 @@
 package pages;
 
-import util.DashboardUtil;
+import locator.DashboardLocator;
 
 public class DashboardPage extends AbstractPage {
-    DashboardUtil dashboardElement =new DashboardUtil();
+    DashboardLocator dashboardElement =new DashboardLocator();
 
     public void navigateCategoriesPage() {
         webElementHelper.click(dashboardElement.catalog);

@@ -1,10 +1,10 @@
 package pages;
 
 import org.openqa.selenium.By;
-import util.CategoriesUtil;
+import locator.CategoriesLocator;
 
 public class CategoriesPage extends AbstractPage {
-    CategoriesUtil categoriesElement = new CategoriesUtil();
+    CategoriesLocator categoriesElement = new CategoriesLocator();
 
     public void verifyCategoriesPage() {
         webElementHelper.isDisplayed(categoriesElement.btn_add_categories);

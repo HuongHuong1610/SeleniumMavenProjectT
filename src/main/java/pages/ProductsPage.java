@@ -1,10 +1,10 @@
 package pages;
 
 import org.openqa.selenium.By;
-import util.ProductsUtil;
+import locator.ProductsLocator;
 
 public class ProductsPage extends AbstractPage {
-    ProductsUtil productsElement = new ProductsUtil();
+    ProductsLocator productsElement = new ProductsLocator();
 
     public void verifyProductPage() {
         webElementHelper.isDisplayed(productsElement.btn_add_product);

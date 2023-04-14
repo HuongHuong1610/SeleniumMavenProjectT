@@ -9,6 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 import java.time.Duration;
+import java.util.Random;
 
 public class BaseTest {
     protected static WebDriver driver;
@@ -25,8 +26,12 @@ public class BaseTest {
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(GlobalConstants.LONG_TIMEOUT));
     }
-    @AfterMethod
+    @AfterMethod()
     public void afterClass() {
         driver.quit();
+    }
+    public static int random(){
+        Random rand = new Random();
+        return rand.nextInt(99999);
     }
 }

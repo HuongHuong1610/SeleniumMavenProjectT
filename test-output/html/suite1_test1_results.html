@@ -3,24 +3,130 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="" lang="">
 <head>
-  <title>Test Results Report - Run on Chrome Browser</title>
+  <title>Test Results Report - Run on FireFox Browser</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
   <meta name="description" content="TestNG unit test results." />
   <link href="reportng.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="reportng.js"></script>
 </head>
 <body>
-<h1>Run on Chrome Browser</h1>
+<h1>Run on FireFox Browser</h1>
 <p>
-  Test duration: 29,815s
+  Test duration: 8,948s
 </p>
 
+  <table class="resultsTable configTable">
+    <tr><th colspan="3" class="header failedConfig">Failed Configuration</th></tr>
+              <tr class="group">
+        <td colspan="3">packagetest2.CreateNewCategory</td>
+      </tr>
+            
+<tr>
+  <td class="method">
+                  afterClass
+      </td>
+  <td class="duration">
+    0,001s
+  </td>
+  <td class="result">
+        
+    
+        
 
-
+        <a href="javascript:toggleElement('exception-0', 'block')" title="Click to expand/collapse"><b>org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.<br/>
+Build info: version: &apos;4.8.3&apos;, revision: &apos;e5e76298c3&apos;<br/>
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_332&apos;<br/>
+Driver info: org.openqa.selenium.firefox.FirefoxDriver<br/>
+Command: [09cbbf83-779a-437a-8102-dae4d21248de, quit {}]<br/>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 102.0, moz:accessibilityChecks: false, moz:buildID: 20220623063721, moz:debuggerAddress: localhost:37067, moz:geckodriverVersion: 0.33.0, moz:headless: false, moz:processID: 16252, moz:profile: C:\Users\ADMIN\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platformName: WINDOWS, platformVersion: 10.0, proxy: Proxy(), se:cdp: ws://localhost:37067/devtoo..., se:cdpVersion: 85.0, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}<br/>
+Session ID: 09cbbf83-779a-437a-8102-dae4d21248de</b></a><br />
+    <div class="stackTrace" id="exception-0">
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br />
+              org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:445)<br />
+              org.openqa.selenium.firefox.FirefoxDriver.quit(FirefoxDriver.java:351)<br />
+              core.baseTestCrossBrowser.afterClass(baseTestCrossBrowser.java:50)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)<br />
+              org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)<br />
+              org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)<br />
+              org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)<br />
+              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)<br />
+              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br />
+              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              java.util.ArrayList.forEach(ArrayList.java:1259)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:808)<br />
+              org.testng.TestRunner.run(TestRunner.java:603)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:429)<br />
+              org.testng.SuiteRunner.access$000(SuiteRunner.java:32)<br />
+              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)<br />
+              org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)<br />
+              java.util.concurrent.FutureTask.run(FutureTask.java:266)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)<br />
+              java.lang.Thread.run(Thread.java:750)<br />
+                    <b>Caused by: </b> <a href="javascript:toggleElement('exception-1', 'block')" title="Click to expand/collapse">java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.CompletableFuture$AsyncSupply@13e1f2c2 rejected from java.util.concurrent.ThreadPoolExecutor@4fd829b6[Shutting down, pool size = 1, active threads = 1, queued tasks = 0, completed tasks = 3]</a><br />
+        <div class="stackTrace" id="exception-1">
+                      java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2063)<br />
+                      java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:830)<br />
+                      java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1379)<br />
+                      java.util.concurrent.CompletableFuture.asyncSupplyStage(CompletableFuture.java:1618)<br />
+                      java.util.concurrent.CompletableFuture.supplyAsync(CompletableFuture.java:1843)<br />
+                      org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:119)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:598)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)<br />
+                      org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:445)<br />
+                      org.openqa.selenium.firefox.FirefoxDriver.quit(FirefoxDriver.java:351)<br />
+                      core.baseTestCrossBrowser.afterClass(baseTestCrossBrowser.java:50)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+                      sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+                      sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+                      java.lang.reflect.Method.invoke(Method.java:498)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)<br />
+                      org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:65)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:381)<br />
+                      org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:319)<br />
+                      org.testng.internal.invokers.TestInvoker.runConfigMethods(TestInvoker.java:803)<br />
+                      org.testng.internal.invokers.TestInvoker.runAfterConfigurations(TestInvoker.java:772)<br />
+                      org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:748)<br />
+                      org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)<br />
+                      org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br />
+                      org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)<br />
+                      org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)<br />
+                      org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+                      org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+                      java.util.ArrayList.forEach(ArrayList.java:1259)<br />
+                      org.testng.TestRunner.privateRun(TestRunner.java:808)<br />
+                      org.testng.TestRunner.run(TestRunner.java:603)<br />
+                      org.testng.SuiteRunner.runTest(SuiteRunner.java:429)<br />
+                      org.testng.SuiteRunner.access$000(SuiteRunner.java:32)<br />
+                      org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)<br />
+                      org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)<br />
+                      java.util.concurrent.FutureTask.run(FutureTask.java:266)<br />
+                      java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)<br />
+                      java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)<br />
+                      java.lang.Thread.run(Thread.java:750)<br />
+                  </div>
+          </div>
+      </td>
+</tr>
+    
+      </table>
 
 
   <table class="resultsTable">
-    <tr><th colspan="3" class="header passed">Passed Tests</th></tr>
+    <tr><th colspan="3" class="header failed">Failed Tests</th></tr>
           <tr>
         <td colspan="3" class="group">packagetest2.CreateNewCategory</td>
       </tr>
@@ -30,60 +136,52 @@
                   TC_01_CreateNewCategory
       </td>
   <td class="duration">
-    9,495s
+    0,000s
   </td>
   <td class="result">
         
           <i>Method arguments: </i><span class="arguments">"admin@yourstore.com", "admin"</span><br />
     
             <div class="testOutput">
-                        [INFO ] [2023-04-13 11:20:28,572] Step1 :Login
-<br>
-                                [INFO ] [2023-04-13 11:20:31,618] Verify Categories Page
-<br>
-                                [INFO ] [2023-04-13 11:20:33,691] step2 : Click button Add new
-<br>
-                                [INFO ] [2023-04-13 11:20:35,063] Step3 : Input Category Name
-<br>
-                                [INFO ] [2023-04-13 11:20:35,517] Step4 : Click button Save & verify message
-<br>
-                                [INFO ] [2023-04-13 11:20:36,968] Step5 : Log out
+                        [INFO ] [2023-04-13 22:09:20,490] Step1 :Login
 <br>
                   </div>
     
 
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  TC_02_CreateNewCustomer
-      </td>
-  <td class="duration">
-    11,401s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"admin@yourstore.com", "admin"</span><br />
-    
-            <div class="testOutput">
-                        [INFO ] [2023-04-13 11:20:41,244] Step1 :Login
-<br>
-                                [INFO ] [2023-04-13 11:20:45,145] Verify Product Page
-<br>
-                                [INFO ] [2023-04-13 11:20:46,661] Step 2: Click button Add new
-<br>
-                                [INFO ] [2023-04-13 11:20:48,707] Step3: Input Product Name, description, SKU, Categories, Price, Old price
-<br>
-                                [INFO ] [2023-04-13 11:20:50,017] Step 4: Input Product Name, description, SKU, Categories, Price, Old price
-<br>
-                                [INFO ] [2023-04-13 11:20:51,478] Step5: logout
-<br>
-                  </div>
-    
-
+        <a href="javascript:toggleElement('exception-2', 'block')" title="Click to expand/collapse"><b>java.lang.NullPointerException</b></a><br />
+    <div class="stackTrace" id="exception-2">
+              core.WebElementHelper.clear(WebElementHelper.java:39)<br />
+              pages.LogInPage.loginSuccess(LogInPage.java:11)<br />
+              packagetest2.CreateNewCategory.TC_01_CreateNewCategory(CreateNewCategory.java:32)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)<br />
+              sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)<br />
+              sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)<br />
+              java.lang.reflect.Method.invoke(Method.java:498)<br />
+              org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:135)<br />
+              org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:673)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:220)<br />
+              org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)<br />
+              org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:945)<br />
+              org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:193)<br />
+              org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)<br />
+              org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)<br />
+              java.util.ArrayList.forEach(ArrayList.java:1259)<br />
+              org.testng.TestRunner.privateRun(TestRunner.java:808)<br />
+              org.testng.TestRunner.run(TestRunner.java:603)<br />
+              org.testng.SuiteRunner.runTest(SuiteRunner.java:429)<br />
+              org.testng.SuiteRunner.access$000(SuiteRunner.java:32)<br />
+              org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:467)<br />
+              org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)<br />
+              java.util.concurrent.FutureTask.run(FutureTask.java:266)<br />
+              java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)<br />
+              java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)<br />
+              java.lang.Thread.run(Thread.java:750)<br />
+                </div>
       </td>
 </tr>
       </table>
+
+
   
 </body>
 </html>

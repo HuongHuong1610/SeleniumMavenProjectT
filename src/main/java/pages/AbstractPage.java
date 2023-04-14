@@ -3,26 +3,26 @@ package pages;
 import core.BaseTest;
 import core.WebElementHelper;
 import org.openqa.selenium.By;
-import util.AbstractPageUtil;
+import locator.AbstractPageLocator;
 
 public class AbstractPage extends BaseTest {
-    AbstractPageUtil abstractPageUtil = new AbstractPageUtil();
+    AbstractPageLocator abstractPageLocator = new AbstractPageLocator();
     WebElementHelper webElementHelper = new WebElementHelper();
 
     public void checkSearchExpand() {
-        if (webElementHelper.getValueOfEleDisplay(By.xpath(abstractPageUtil.search + "//following-sibling::*[contains(@class, 'search-body')]")).contains("none")) {
-            webElementHelper.click(By.xpath(abstractPageUtil.search));
+        if (webElementHelper.getValueOfEleDisplay(By.xpath(abstractPageLocator.search + "//following-sibling::*[contains(@class, 'search-body')]")).contains("none")) {
+            webElementHelper.click(By.xpath(abstractPageLocator.search));
         }
     }
 
     public void checkInfoProdFieldExpand() {
-        if (webElementHelper.getValueOfEleDisplay(By.xpath(abstractPageUtil.info_product_field + "//*[@class = 'card-body']")).contains("none")) {
-            webElementHelper.click(By.xpath(abstractPageUtil.info_product_field));
+        if (webElementHelper.getValueOfEleDisplay(By.xpath(abstractPageLocator.info_product_field + "//*[@class = 'card-body']")).contains("none")) {
+            webElementHelper.click(By.xpath(abstractPageLocator.info_product_field));
         }
     }
 
     public void clickSave() {
-        webElementHelper.click(abstractPageUtil.btn_save);
+        webElementHelper.click(abstractPageLocator.btn_save);
         webElementHelper.waitForMessageDisplayed();
     }
 }

@@ -1,8 +1,8 @@
-package util;
+package locator;
 
 import org.openqa.selenium.By;
 
-public class ProductsUtil extends AbstractPageUtil{
+public class ProductsLocator extends AbstractPageLocator {
     public By product_name = By.xpath("//label[contains(text(),'Product name')]");
     public By warehouse = By.xpath("//label[contains(text(),'Warehouse')]");
     public By category = By.xpath("//label[contains(text(),'Category')]");

@@ -3,13 +3,13 @@ package pages;
 import core.WebElementHelper;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import util.CustomerRolesUtil;
+import locator.CustomerRolesLocator;
 
 import java.util.List;
 
 public class CustomerRolesPage extends AbstractPage {
     WebElementHelper common = new WebElementHelper();
-    CustomerRolesUtil customerRolesElement = new CustomerRolesUtil();
+    CustomerRolesLocator customerRolesElement = new CustomerRolesLocator();
 
     public void clickEdit(String name) {
         webElementHelper.click(By.xpath("//td[contains(text(), '" + name + "')]//following-sibling::*//a[@class = 'btn btn-default']"));

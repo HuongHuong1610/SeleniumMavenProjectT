@@ -1,8 +1,8 @@
-package util;
+package locator;
 
 import org.openqa.selenium.By;
 
-public class LoginPageUtil {
+public class LoginPageLocator {
     public By email = By.id("Email");
     public By password = By.id("Password");
 

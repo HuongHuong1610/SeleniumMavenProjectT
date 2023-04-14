@@ -1,8 +1,8 @@
-package util;
+package locator;
 
 import org.openqa.selenium.By;
 
-public class AbstractPageUtil {
+public class AbstractPageLocator {
     public By btn_add_categories = By.xpath("//a[@href='/Admin/Category/Create']");
     public By btn_add_product = By.xpath("//a[@href='/Admin/Product/Create']");
     public By btn_export = By.className("btn-group");
