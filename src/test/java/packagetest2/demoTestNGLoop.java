@@ -6,18 +6,21 @@ import org.testng.annotations.Test;
 import pages.LogInPage;
 import pages.RegisterPage;
 
+import core.baseTestCrossBrowser;
+
 
 public class demoTestNGLoop extends BaseTest {
     private static final String PASSWORD = "Huong@12345";
     private static final String MESSAGE = "Your registration completed";
 
-    @Test(invocationCount = 1 ,enabled = false)
+    @Test(invocationCount = 1)
     public void TC_01_CreateNewCategory() {
         log.info("Step1 :Login");
         LogInPage logInPage = new LogInPage();
         PropertiesFile.setPropertiesFile();
         String email = PropertiesFile.getPropValue("email.login.error");
         String pwd = PropertiesFile.getPropValue("password.login.error");
+        PropertiesFile.setPropValue("test","huong");
         logInPage.loginSuccess(email, pwd);
 
         log.info("Navigate lại vào link này để test phần loop register");

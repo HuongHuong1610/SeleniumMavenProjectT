@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Run multiple testNG file">
+    <suite-files>
+        <suite-file path="testNG.xml"></suite-file>
+        <suite-file path="testNG_1.xml"></suite-file>
+    </suite-files>
+</suite>

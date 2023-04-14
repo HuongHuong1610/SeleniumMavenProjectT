@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite testNG">
+    <listeners>
+        <listener class-name="commons.ReportNGListener"></listener>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+    </listeners>
+    <test name="Run on Chrome Browser">
+        <parameter name="browser" value="chrome"/>
+        <packages>
+            <package name="packagetest2"></package>
+        </packages>
+    </test>
+    <test name="Run on FireFox Browser">
+        <parameter name="browser" value="firefox"/>
+        <packages>
+            <package name="packagetest2"></package>
+        </packages>
+    </test>
+    <test name="Run on Edge Browser">
+        <parameter name="browser" value="edge"/>
+        <packages>
+            <package name="packagetest2"></package>
+        </packages>
+    </test>
+</suite>
