@@ -24,12 +24,12 @@ public class TestNGAppender extends AppenderSkeleton {
         return true;
     }
 
-    /**
-     * Insert log message into ReportNG
-     * @param logMessage
-     */
-    public void info(String logMessage) {
-        Reporter.log(logMessage);
-    }
+//    /**
+//     * Insert log message into ReportNG
+//     * @param logMessage
+//     */
+//    public void info(String logMessage) {
+//        Reporter.log(logMessage);
+//    }
 
 }
