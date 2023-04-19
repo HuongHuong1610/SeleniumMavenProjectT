@@ -2,6 +2,7 @@ package pages;
 
 import core.BaseTest;
 import core.WebElementHelper;
+import core.baseTestCrossBrowser;
 import org.openqa.selenium.By;
 import locator.AbstractPageLocator;
 

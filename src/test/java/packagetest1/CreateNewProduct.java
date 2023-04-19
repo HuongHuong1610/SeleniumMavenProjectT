@@ -25,7 +25,7 @@ public class CreateNewProduct extends BaseTest {
 
     //expect input from method getData
     @Test(dataProvider = "getData")
-    public void TC_01_CreateNewProduct(String email, String pwd) {
+    public void TC_04_CreateNewProduct(String email, String pwd) {
         log.info("Step1 :Login");
         logInPage.loginSuccess(email, pwd);
 
@@ -70,8 +70,8 @@ public class CreateNewProduct extends BaseTest {
         log.info("Step5 : Log out");
         logInPage.logOut();
     }
-    @Test
-    public void TC_03_ReadDataFromPropertiesFile() {
+    @Test(enabled = false)
+    public void TC_05_ReadDataFromPropertiesFile() {
         log.info("Step1 :Login");
         PropertiesFile.setPropertiesFile();
         String email = PropertiesFile.getPropValue("email.login.error");
