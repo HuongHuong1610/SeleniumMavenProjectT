@@ -4,6 +4,7 @@ import core.ExcelHelper;
 import core.GlobalConstants;
 import core.baseTestCrossBrowser;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import pages.CategoriesPage;
 import pages.DashboardPage;
@@ -24,12 +25,11 @@ public class CreateNewCategory extends baseTestCrossBrowser {
         Object data[][] = excel.getTestData("data", path);
         return data;
     }
-
-    @Test(dataProvider = "getData")
-    public void TC_01_CreateNewCategory(String email, String pwd) {
+    @Test()
+    public void TC_01_CreateNewCategory(String test1) {
         log.info("Step1 :Login");
-
-        logInPage.loginSuccess(email, pwd);
+        log.info(test1);
+        logInPage.loginSuccess("email", "pwd");
         log.info("Verify Categories Page");
         dashboardPage.navigateCategoriesPage();
         categoriesPage.verifyCategoriesPage();

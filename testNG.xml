@@ -2,13 +2,13 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="All Test Suite">
     <listeners>
-<!--        <listener class-name="commons.ReportNGListener"></listener>-->
-<!--        <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>-->
+        <listener class-name="commons.ReportNGListener"></listener>
         <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
-        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>
-        <listener class-name="commons.ExtentReport"></listener>
+<!--        <listener class-name="org.uncommons.reportng.HTMLReporter"></listener>-->
+<!--        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"></listener>-->
+<!--        <listener class-name="commons.ExtentReport"></listener>-->
     </listeners>
-    <test name="Run on Chrome Browser">
+    <test name="Run on Chrome Browser" parallel="methods">
         <parameter name="browser" value="chrome"/>
         <packages>
             <package name="packagetest2"></package>

@@ -24,7 +24,7 @@ public class baseTestCrossBrowser {
         log = LogFactory.getLog(getClass());
     }
     @Parameters("browser")
-    @BeforeMethod
+    @BeforeMethod()
     protected WebDriver setup(String browserName) {
         switch (browserName) {
             case "chrome":

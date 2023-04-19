@@ -22,8 +22,29 @@ public class CreateNewProduct extends baseTestCrossBrowser {
         return data;
     }
 
-    @Test(dataProvider = "getData",enabled = false)
+    @Test(dataProvider = "getData")
     public void TC_CreateNewCategory(String email, String pwd) {
+        log.info("Step1 :Login");
+
+        logInPage.loginSuccess(email, pwd);
+        log.info("Verify Categories Page");
+        dashboardPage.navigateCategoriesPage();
+        categoriesPage.verifyCategoriesPage();
+
+        log.info("step2 : Click button Add new");
+        categoriesPage.clickAddCategory();
+
+        log.info("Step3 : Input Category Name");
+        categoriesPage.inputCategoryName("test");
+
+        log.info("Step4 : Click button Save & verify message");
+        categoriesPage.clickSave();
+
+        log.info("Step5 : Log out");
+        logInPage.logOut();
+    }
+    @Test(dataProvider = "getData")
+    public void TC_01_CreateNewCategory(String email, String pwd) {
         log.info("Step1 :Login");
 
         logInPage.loginSuccess(email, pwd);

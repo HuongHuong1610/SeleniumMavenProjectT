@@ -13,7 +13,7 @@ public class demoTestNGLoop extends BaseTest {
     private static final String PASSWORD = "Huong@12345";
     private static final String MESSAGE = "Your registration completed";
 
-    @Test(invocationCount = 1)
+    @Test(invocationCount = 3,enabled = false)
     public void TC_01_CreateNewCategory() {
         log.info("Step1 :Login");
         LogInPage logInPage = new LogInPage();
